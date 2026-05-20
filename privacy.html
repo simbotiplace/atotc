@@ -25,11 +25,44 @@
       padding: 48px 24px 64px;
     }
 
-    h2 { font-size: 1.15rem; font-weight: 700; margin: 32px 0 10px; color: #C8372D; }
+    h2 { font-size: 1.15rem; font-weight: 700; margin: 36px 0 10px; color: #C8372D; }
+    h3 { font-size: 1rem; font-weight: 700; margin: 20px 0 8px; color: #333; }
     p  { line-height: 1.75; color: #444; margin-bottom: 12px; font-size: 0.95rem; }
     ul { padding-left: 20px; margin-bottom: 12px; }
     li { line-height: 1.75; color: #444; font-size: 0.95rem; margin-bottom: 4px; }
     a  { color: #C8372D; }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+      font-size: 0.9rem;
+    }
+    .data-table th {
+      background: #fdf4f4;
+      color: #C8372D;
+      font-weight: 700;
+      text-align: left;
+      padding: 10px 14px;
+      border-bottom: 2px solid #C8372D;
+    }
+    .data-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+      color: #444;
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+
+    .callout {
+      background: #fdf4f4;
+      border-left: 4px solid #C8372D;
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+      font-size: 0.9rem;
+      color: #555;
+    }
 
     footer {
       border-top: 1px solid #eee;
@@ -47,79 +80,193 @@
   <header>
     <a href="index.html">← Ava's Taste of the Caribbean</a>
     <h1>Privacy Policy</h1>
-    <p>Last updated: May 2026</p>
+    <p>Effective date: May 2026 &nbsp;·&nbsp; Last updated: May 2026</p>
   </header>
 
   <main>
 
     <p>
-      This Privacy Policy describes how Ava's Taste of the Caribbean ("we", "us", or "our") collects,
-      uses, and protects your information when you use our mobile application ("the App").
+      This Privacy Policy explains how Ava's Taste of the Caribbean ("we", "us", or "our") collects,
+      uses, stores, and shares information about you when you use our mobile application
+      ("the App"). By using the App you agree to the practices described in this policy.
     </p>
 
-    <h2>Information We Collect</h2>
-    <p>We collect the following information when you use the App:</p>
-    <ul>
-      <li><strong>Account information:</strong> email address and password (stored securely and never shared).</li>
-      <li><strong>Order information:</strong> items ordered, order status, and order history.</li>
-      <li><strong>Device location:</strong> collected at checkout to verify you are in a Square-supported payment region. Not stored after the session ends.</li>
-    </ul>
+    <div class="callout">
+      We do not sell your personal data. We do not use your data to serve you
+      advertisements. We do not share your data with third parties except the
+      service providers listed below that are strictly necessary to operate the App.
+    </div>
 
-    <h2>Information We Do Not Collect</h2>
-    <ul>
-      <li>We do <strong>not</strong> store payment card details. All payment processing is handled directly by Square. Please review <a href="https://squareup.com/us/en/legal/general/privacy" target="_blank" rel="noopener">Square's Privacy Policy</a> for details on how they handle payment data.</li>
-      <li>We do <strong>not</strong> collect Bluetooth or microphone data beyond what is necessary to initiate a payment session with a Square card reader.</li>
-    </ul>
-
-    <h2>How We Use Your Information</h2>
-    <ul>
-      <li>To process and fulfil your orders.</li>
-      <li>To provide real-time order status updates.</li>
-      <li>To maintain your order history for reordering convenience.</li>
-      <li>To verify payment eligibility via location at checkout.</li>
-    </ul>
-
-    <h2>How We Store Your Information</h2>
+    <h2>1. Data We Collect and Why</h2>
     <p>
-      Your account and order data is stored securely using Supabase, a managed database platform.
-      Data is encrypted in transit (TLS) and at rest. We retain your data for as long as your
-      account is active. You may request deletion at any time (see below).
+      The table below maps each category of data to the Apple App Store privacy
+      label we have declared for the App.
     </p>
 
-    <h2>Sharing of Information</h2>
-    <p>
-      We do not sell, rent, or share your personal information with third parties for marketing purposes.
-      Your data is shared only with the following service providers strictly to operate the App:
-    </p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data type</th>
+          <th>What we collect</th>
+          <th>Why</th>
+          <th>Linked to you?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Contact Info</strong></td>
+          <td>Email address</td>
+          <td>Account creation, order confirmations, password resets</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td><strong>Identifiers</strong></td>
+          <td>Internal user ID</td>
+          <td>Linking your orders and favourites to your account</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td><strong>Purchases / Order History</strong></td>
+          <td>Items ordered, quantities, order totals, timestamps</td>
+          <td>Fulfilling orders, order history, reordering</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td><strong>Location</strong></td>
+          <td>Precise device location (at checkout only)</td>
+          <td>Verifying you are in a Square-supported payment region</td>
+          <td>Yes — session only, not stored</td>
+        </tr>
+        <tr>
+          <td><strong>Usage Data</strong></td>
+          <td>Menu items browsed, cart interactions</td>
+          <td>App functionality and improving the ordering experience</td>
+          <td>Yes</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>What we do not collect</h3>
     <ul>
-      <li><strong>Square</strong> — payment processing.</li>
-      <li><strong>Supabase</strong> — database and authentication.</li>
+      <li><strong>Payment card details</strong> — all card data is entered directly into Square's secure payment flow and never passes through our servers.</li>
+      <li><strong>Bluetooth data</strong> — Bluetooth access is used only to communicate with Square card readers during a payment. No Bluetooth data is recorded.</li>
+      <li><strong>Audio or microphone data</strong> — microphone access is required by Square for magstripe card readers only. No audio is recorded or stored.</li>
+      <li><strong>Precise location outside of checkout</strong> — location is requested once at the point of payment and is not stored after the session ends.</li>
     </ul>
 
-    <h2>Your Rights</h2>
+    <h2>2. Tracking</h2>
+    <p>
+      We do <strong>not</strong> track you across other companies' apps or websites.
+      Your data is used solely within the App to provide the service you requested.
+      The App does not use advertising identifiers (IDFA) or any cross-app tracking technology.
+    </p>
+
+    <h2>3. How We Use Your Information</h2>
     <ul>
-      <li><strong>Access:</strong> you may request a copy of the personal data we hold about you.</li>
-      <li><strong>Correction:</strong> you may request that inaccurate data be corrected.</li>
-      <li><strong>Deletion:</strong> you may request that your account and all associated data be deleted. Email us at <a href="mailto:aagombedza@gmail.com">aagombedza@gmail.com</a> with the subject line <em>Delete my account</em>. We will action your request within 30 days.</li>
+      <li>To create and manage your account.</li>
+      <li>To process, fulfil, and track your orders in real time.</li>
+      <li>To maintain your order history and saved favourites.</li>
+      <li>To send transactional communications (order confirmations, password resets).</li>
+      <li>To verify payment eligibility by confirming your location at checkout.</li>
+      <li>To improve the App based on aggregated, anonymised usage patterns.</li>
     </ul>
 
-    <h2>Children's Privacy</h2>
+    <h2>4. How We Store Your Information</h2>
     <p>
-      The App is not directed at children under the age of 13. We do not knowingly collect personal
-      information from children. If you believe a child has provided us with personal information,
-      please contact us and we will delete it promptly.
+      Account and order data is stored on <strong>Supabase</strong>, a managed cloud database platform.
+      All data is encrypted in transit using TLS and encrypted at rest. Supabase infrastructure
+      is hosted on AWS (us-east-1). We retain your data for as long as your account is active.
+    </p>
+    <p>
+      Password hashes are managed by Supabase Auth using bcrypt. We never store
+      plain-text passwords.
     </p>
 
-    <h2>Changes to This Policy</h2>
+    <h2>5. Third-Party Service Providers</h2>
     <p>
-      We may update this Privacy Policy from time to time. When we do, we will update the date at
-      the top of this page. Continued use of the App after changes constitutes acceptance of the
-      updated policy.
+      We share data only with the following processors, strictly to operate the App.
+      Each is bound by their own privacy policy and data processing agreements.
     </p>
 
-    <h2>Contact Us</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Provider</th>
+          <th>Purpose</th>
+          <th>Data shared</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong><a href="https://squareup.com/us/en/legal/general/privacy" target="_blank" rel="noopener">Square</a></strong></td>
+          <td>Payment processing</td>
+          <td>Payment card details (entered directly into Square's UI — not seen by us)</td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a></strong></td>
+          <td>Database, authentication, real-time updates</td>
+          <td>Email address, user ID, order data</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>We do not sell, rent, or share your personal information with any other third party.</p>
+
+    <h2>6. Your Privacy Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> — request a copy of the personal data we hold about you.</li>
+      <li><strong>Correction</strong> — request that inaccurate data be corrected.</li>
+      <li><strong>Deletion</strong> — request that your account and all associated data be permanently deleted. Email <a href="mailto:aagombedza@gmail.com">aagombedza@gmail.com</a> with the subject line <em>Delete my account</em>. We will confirm deletion within 30 days.</li>
+      <li><strong>Portability</strong> — request a machine-readable export of your data.</li>
+      <li><strong>Opt-out</strong> — you may stop using the App at any time. Deleting the App does not delete your account — use the deletion request above to remove your data.</li>
+    </ul>
+
     <p>
-      If you have any questions about this Privacy Policy, please contact us at:<br />
+      If you are a resident of California, you may have additional rights under the
+      California Consumer Privacy Act (CCPA), including the right to know what personal
+      information we collect and to opt out of any sale of personal information
+      (we do not sell personal information).
+    </p>
+
+    <h2>7. Data Retention</h2>
+    <p>
+      We retain your account and order data for as long as your account remains active.
+      If you request account deletion, we will delete your personal data within 30 days,
+      except where we are required to retain it by applicable law (e.g. financial records
+      required for tax purposes).
+    </p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>
+      The App is not directed at children under the age of 13. We do not knowingly
+      collect personal information from children under 13. If you believe a child under 13
+      has created an account or provided personal information, please contact us immediately
+      at <a href="mailto:aagombedza@gmail.com">aagombedza@gmail.com</a> and we will
+      delete the information promptly.
+    </p>
+
+    <h2>9. Security</h2>
+    <p>
+      We use industry-standard safeguards including TLS encryption in transit, encryption
+      at rest, and role-based access controls. However, no method of transmission over the
+      internet is 100% secure. We encourage you to use a strong, unique password and to
+      keep your account credentials confidential.
+    </p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. When we do, we will update the
+      effective date at the top of this page. For material changes we will make reasonable
+      efforts to notify you (for example, via an in-app notice). Continued use of the App
+      after a change takes effect constitutes your acceptance of the updated policy.
+    </p>
+
+    <h2>11. Contact Us</h2>
+    <p>
+      If you have any questions, requests, or concerns about this Privacy Policy or how we
+      handle your data, please contact us at:<br /><br />
+      <strong>Ava's Taste of the Caribbean</strong><br />
       <a href="mailto:aagombedza@gmail.com">aagombedza@gmail.com</a>
     </p>
 
